@@ -14,6 +14,10 @@ export default defineConfig({
         find: '@components',
         replacement: resolve(__dirname, 'src', 'components'),
       },
+      {
+        find: '@stores',
+        replacement: resolve(__dirname, 'src', 'stores'),
+      },
     ],
   },
 });

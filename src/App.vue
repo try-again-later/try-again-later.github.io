@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import projects from './Projects';
 import ProjectCard from '@components/ProjectCard.vue';
+import ImagesGallery from '@components/ImagesGallery.vue';
+
+import projects from './Projects';
+import { useGalleryStore } from './stores/gallery';
+
+const gallery = useGalleryStore();
 </script>
 
 <template>
@@ -13,5 +18,7 @@ import ProjectCard from '@components/ProjectCard.vue';
         </li>
       </ul>
     </div>
+
+    <ImagesGallery v-if="gallery.opened" :images="gallery.images" />
   </main>
 </template>
