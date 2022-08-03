@@ -9,7 +9,8 @@ export type Technology =
   | 'Pug'
   | 'CSS'
   | 'Alpine.js'
-  | 'Vue';
+  | 'Vue'
+  | 'Pinia';
 
 export type ProjectInfo = {
   name: string;
@@ -26,8 +27,11 @@ const projects: ProjectInfo[] = [
     sourceCodeUrl: 'https://github.com/try-again-later/try-again-later.github.io',
     liveUrl: 'https://try-again-later.github.io',
     description: 'A list of my projects.',
-    technologies: ['Tailwind', 'Typescript', 'Vue'],
-    screenshots: [],
+    technologies: ['Tailwind', 'Typescript', 'Vue', 'Pinia'],
+    screenshots: [
+      '/screenshots/try-again-later.github.io/1.jpg',
+      '/screenshots/try-again-later.github.io/2.jpg',
+    ],
   },
   {
     name: '"pup" PHP library',
@@ -88,7 +92,7 @@ const projects: ProjectInfo[] = [
     sourceCodeUrl: 'https://github.com/try-again-later/Interactive-Product-Page',
     liveUrl: 'https://try-again-later.github.io/Interactive-Product-Page',
     description:
-      'A product page for the ecommerce website made with Tailwind and Alpinejs framework. All the buttons are actually clickable.',
+      'A product page for the ecommerce website made with Tailwind and Alpinejs framework. All the buttons are actually clickable. There is only a mobile version for now, but it still usable on desktop.',
     technologies: ['Tailwind', 'Alpine.js'],
     screenshots: [
       '/screenshots/interactive-product-page/1.jpg',

@@ -33,6 +33,7 @@ defineProps<{
         v-if="info.screenshots.length > 0"
         :preview-src="info.screenshots[0]"
         :images-urls="info.screenshots"
+        class="mb-4"
       />
       <p>{{ info.description }}</p>
     </section>
