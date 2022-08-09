@@ -1,11 +1,15 @@
 <script setup lang="ts">
+import { MailIcon, PaperAirplaneIcon } from '@heroicons/vue/outline';
+
 import ProjectCard from '@components/ProjectCard.vue';
 import ImagesGallery from '@components/ImagesGallery.vue';
 import SkillsList from '@components/SkillsList.vue';
+import ContactLink from '@components/ContactLink.vue';
 
-import projects from './Projects';
-import { frontendSkills, backendSkills, miscSkills } from './Skills';
-import { useGalleryStore } from './stores/gallery';
+import projects from '@root/Projects';
+import { frontendSkills, backendSkills, miscSkills } from '@root/Skills';
+import { useGalleryStore } from '@root/stores/gallery';
+import contacts from '@root/Contacts';
 
 const gallery = useGalleryStore();
 </script>
@@ -15,6 +19,19 @@ const gallery = useGalleryStore();
     <h1 class="sr-only">My page</h1>
 
     <div class="container m-auto p-6 flex flex-col gap-12">
+      <section>
+        <h2 class="text-3xl lg:mb-6 mb-4 text-center sm:text-left">Contacts</h2>
+
+        <address class="not-italic">
+          <ContactLink :href="`mailto:${contacts.email}`" title="Email" :icon="MailIcon" class="mb-2">
+            {{ contacts.email }}
+          </ContactLink>
+          <ContactLink :href="contacts.telegramLink" title="Telegram" :icon="PaperAirplaneIcon">
+            {{ `@${contacts.telegram}` }}
+          </ContactLink>
+        </address>
+      </section>
+
       <section>
         <h2 class="text-3xl lg:mb-6 mb-4 text-center sm:text-left">Skills</h2>
 
