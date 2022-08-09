@@ -12,10 +12,10 @@ defineProps<{
 
 <template>
   <article class="p-4 rounded-md shadow-md h-full bg-white flex gap-4 flex-col">
-    <h2 class="text-xl">{{ info.name }}</h2>
+    <h3 class="text-xl">{{ info.name }}</h3>
 
     <section>
-      <h3 class="sr-only">Technologies used</h3>
+      <h4 class="sr-only">Technologies used</h4>
       <ul class="flex gap-2 flex-wrap">
         <li
           v-for="technology in info.technologies"
@@ -28,7 +28,7 @@ defineProps<{
     </section>
 
     <section>
-      <h3 class="sr-only">Description</h3>
+      <h4 class="sr-only">Description</h4>
       <ImagesPreviewButton
         v-if="info.screenshots.length > 0"
         :preview-src="info.screenshots[0]"
@@ -39,7 +39,7 @@ defineProps<{
     </section>
 
     <section class="mt-auto">
-      <h3 class="sr-only">Links</h3>
+      <h4 class="sr-only">Links</h4>
       <div class="flex flex-wrap gap-4">
         <IconLink :href="info.sourceCodeUrl" :icon="CodeIcon"> Source code </IconLink>
         <IconLink v-if="info.liveUrl != null" :href="info.liveUrl" :icon="GlobeIcon">
