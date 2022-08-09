@@ -10,7 +10,11 @@ export type Technology =
   | 'CSS'
   | 'Alpine.js'
   | 'Vue'
-  | 'Pinia';
+  | 'Pinia'
+  | 'Twig'
+  | 'Postgres'
+  | 'Docker'
+  | 'Nginx';
 
 export type ProjectInfo = {
   name: string;
@@ -22,6 +26,19 @@ export type ProjectInfo = {
 };
 
 const projects: ProjectInfo[] = [
+  {
+    name: 'A ToDo app written in PHP without using any "big" frameworks',
+    sourceCodeUrl: 'https://github.com/try-again-later/Todo-App',
+    liveUrl: 'https://tal-todo-app.herokuapp.com',
+    description: 'The only third-party dependencies are Twig templates and a DotEnv package. There is obviously no point in avoiding frameworks, I did this project just for learning purposes. It also utilizes my other project: a validation library called "pup". I\'ve also "dockerized" the app so that it could be run just by typing a couple of shell commands.',
+    technologies: ['PHP', 'Postgres', 'Twig', 'Tailwind', 'Docker', 'Nginx'],
+    screenshots: [
+      '/screenshots/todo-app/1.png',
+      '/screenshots/todo-app/2.png',
+      '/screenshots/todo-app/3.png',
+      '/screenshots/todo-app/4.png',
+    ],
+  },
   {
     name: 'A page with the list of my projects',
     sourceCodeUrl: 'https://github.com/try-again-later/try-again-later.github.io',
