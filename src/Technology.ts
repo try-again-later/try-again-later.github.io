@@ -14,6 +14,7 @@ type Technology =
   | 'Twig'
   | 'Postgres'
   | 'Docker'
-  | 'Nginx';
+  | 'Nginx'
+  | 'Laravel';
 
 export default Technology;

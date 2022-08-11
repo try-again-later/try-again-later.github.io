@@ -35,7 +35,9 @@ defineProps<{
         :images-urls="info.screenshots"
         class="mb-4"
       />
-      <p>{{ info.description }}</p>
+      <div class="flex flex-col gap-4">
+        <p v-for="paragraph in info.description">{{ paragraph }}</p>
+      </div>
     </section>
 
     <section class="mt-auto">
@@ -45,6 +47,7 @@ defineProps<{
         <IconLink v-if="info.liveUrl != null" :href="info.liveUrl" :icon="GlobeIcon">
           Live version
         </IconLink>
+        <div v-if="info.wip" class="font-bold text-sm ml-auto">Not finished</div>
       </div>
     </section>
   </article>

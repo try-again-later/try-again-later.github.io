@@ -50,6 +50,11 @@ const backendSkills: Skill[] = [
     technology: 'Twig templates',
     level: 2,
   },
+  {
+    technology: 'Laravel',
+    level: 1,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg',
+  },
 ];
 
 const miscSkills: Skill[] = [
