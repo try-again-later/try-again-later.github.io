@@ -1,5 +1,3 @@
-import Technology from './Technology';
-
 export const MAX_SKILL_LEVEL = 5;
 
 export type Skill = {
@@ -31,7 +29,8 @@ const frontendSkills: Skill[] = [
   },
   {
     technology: 'Alpine.js',
-    level: 2,
+    level: 4,
+    icon: '/icons/alpinejs.svg',
   },
 ];
 
@@ -49,11 +48,17 @@ const backendSkills: Skill[] = [
   {
     technology: 'Twig templates',
     level: 2,
+    icon: 'https://twig.symfony.com/images/logo.png',
   },
   {
     technology: 'Laravel',
-    level: 1,
+    level: 2,
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg',
+  },
+  {
+    technology: 'Livewire',
+    level: 2,
+    icon: '/icons/livewire.svg',
   },
 ];
 
@@ -67,6 +72,11 @@ const miscSkills: Skill[] = [
     technology: 'Nginx',
     level: 1,
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
+  },
+  {
+    technology: 'Github Actions',
+    level: 1,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
   },
 ];
 
