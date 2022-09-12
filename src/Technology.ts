@@ -15,6 +15,13 @@ type Technology =
   | 'Postgres'
   | 'Docker'
   | 'Nginx'
-  | 'Laravel';
+  | 'Laravel'
+  | 'Livewire'
+  | 'RabbitMQ'
+  | 'ReactPHP'
+  | 'Ratchet'
+  | 'MinIO'
+  | 'FFmpeg'
+  | 'MongoDB';
 
 export default Technology;

@@ -37,7 +37,7 @@ const frontendSkills: Skill[] = [
 const backendSkills: Skill[] = [
   {
     technology: 'PHP',
-    level: 3,
+    level: 4,
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
   },
   {
@@ -52,13 +52,23 @@ const backendSkills: Skill[] = [
   },
   {
     technology: 'Laravel',
-    level: 2,
+    level: 3,
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg',
   },
   {
     technology: 'Livewire',
-    level: 2,
+    level: 4,
     icon: '/icons/livewire.svg',
+  },
+  {
+    technology: 'MongoDB',
+    level: 1,
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+  },
+  {
+    technology: 'RabbitMQ',
+    level: 1,
+    icon: '/icons/rabbitmq.svg',
   },
 ];
 

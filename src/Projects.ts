@@ -12,6 +12,29 @@ export type ProjectInfo = {
 
 const projects: ProjectInfo[] = [
   {
+    name: 'A videos convert app',
+    sourceCodeUrl: 'https://github.com/try-again-later/Media-Convert-App',
+    description: [
+      'A website for resizing videos.',
+      'MinIO is used to store videos, RabbitMQ is for distributing the workload among the workers converting videos using FFmpeg.',
+      'Ratchet is used to update the user on the video conversion progress in real-time.'
+    ],
+    technologies: [
+      'PHP',
+      'Ratchet',
+      'ReactPHP',
+      'Tailwind',
+      'Vue',
+      'Docker',
+      'RabbitMQ',
+      'MinIO',
+      'FFmpeg',
+      'MongoDB',
+    ],
+    screenshots: ['/screenshots/media-convert-app/1.png'],
+    wip: true,
+  },
+  {
     name: 'A ToDo app written in PHP without using any "big" frameworks',
     sourceCodeUrl: 'https://github.com/try-again-later/Todo-App',
     liveUrl: 'https://tal-todo-app.herokuapp.com',
@@ -35,11 +58,15 @@ const projects: ProjectInfo[] = [
     liveUrl: 'https://tal-voting-app.herokuapp.com',
     description: [
       'Basically an issue tracker. Users can submit their requests for features, bug reports or some questions about the product. Meanwhile the product owners update the users on when the requested feature is implemented or a bug is fixed.',
-      "So far I've only created basic templates and styles.",
+      'Use email "admin@example.com" and password "123123123" to login or just register a new account',
     ],
-    technologies: ['PHP', 'Laravel', 'Tailwind', 'Alpine.js'],
-    screenshots: ['/screenshots/voting-app/1.png', '/screenshots/voting-app/2.png'],
-    wip: true,
+    technologies: ['PHP', 'Laravel', 'Livewire', 'Tailwind', 'Alpine.js'],
+    screenshots: [
+      '/screenshots/voting-app/1.png',
+      '/screenshots/voting-app/2.png',
+      '/screenshots/voting-app/3.png',
+    ],
+    wip: false,
   },
   {
     name: 'A page with the list of my projects',

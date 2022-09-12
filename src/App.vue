@@ -15,7 +15,7 @@ const gallery = useGalleryStore();
 </script>
 
 <template>
-  <main>
+  <main @keydown.esc="gallery.opened = false">
     <h1 class="sr-only">My page</h1>
 
     <div class="container m-auto p-6 flex flex-col gap-12">
@@ -23,7 +23,12 @@ const gallery = useGalleryStore();
         <h2 class="text-3xl lg:mb-6 mb-4 text-center sm:text-left">Contacts</h2>
 
         <address class="not-italic">
-          <ContactLink :href="`mailto:${contacts.email}`" title="Email" :icon="MailIcon" class="mb-2">
+          <ContactLink
+            :href="`mailto:${contacts.email}`"
+            title="Email"
+            :icon="MailIcon"
+            class="mb-2"
+          >
             {{ contacts.email }}
           </ContactLink>
           <ContactLink :href="contacts.telegramLink" title="Telegram" :icon="PaperAirplaneIcon">
