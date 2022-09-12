@@ -92,7 +92,7 @@ const projects: ProjectInfo[] = [
   },
   {
     name: '"Multi-backed enum" PHP library',
-    sourceCodeUrl: 'https://github.com/try-again-later/MultiBackedEnum',
+    sourceCodeUrl: 'https://github.com/try-again-later/Multi-Backed-Enum',
     description: [
       'A small PHP library for creating enums with cases backed by multiple values. See the github repo for usage examples.',
     ],
