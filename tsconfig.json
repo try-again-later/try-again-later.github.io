@@ -16,7 +16,8 @@
     "paths": {
       "@root/*": ["./*"],
       "@components/*": ["./components/*"],
-      "@stores/*": ["./stores/*"]
+      "@stores/*": ["./stores/*"],
+      "@icons/*": ["./icons/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],

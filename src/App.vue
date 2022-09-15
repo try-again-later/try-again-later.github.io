@@ -5,6 +5,7 @@ import ProjectCard from '@components/ProjectCard.vue';
 import ImagesGallery from '@components/ImagesGallery.vue';
 import SkillsList from '@components/SkillsList.vue';
 import ContactLink from '@components/ContactLink.vue';
+import GithubIcon from '@icons/Github.vue';
 
 import projects from '@root/Projects';
 import { frontendSkills, backendSkills, miscSkills } from '@root/Skills';
@@ -31,8 +32,24 @@ const gallery = useGalleryStore();
           >
             {{ contacts.email }}
           </ContactLink>
-          <ContactLink :href="contacts.telegramLink" title="Telegram" :icon="PaperAirplaneIcon">
+
+          <ContactLink
+            :href="contacts.telegramLink"
+            title="Telegram"
+            :icon="PaperAirplaneIcon"
+            class="mb-2"
+            :open-in-new-tab="true"
+          >
             {{ `@${contacts.telegram}` }}
+          </ContactLink>
+
+          <ContactLink
+            :href="contacts.githubLink"
+            title="Github"
+            :icon="GithubIcon"
+            :open-in-new-tab="true"
+          >
+            {{ `@${contacts.github}` }}
           </ContactLink>
         </address>
       </section>

@@ -18,6 +18,10 @@ export default defineConfig({
         find: '@stores',
         replacement: resolve(__dirname, 'src', 'stores'),
       },
+      {
+        find: '@icons',
+        replacement: resolve(__dirname, 'src', 'icons'),
+      },
     ],
   },
 });
