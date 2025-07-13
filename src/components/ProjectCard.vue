@@ -2,8 +2,8 @@
 import IconLink from '@components/IconLink.vue';
 import ImagesPreviewButton from '@root/components/ImagesPreviewButton.vue';
 
-import { ProjectInfo } from '@root/Projects';
-import { CodeIcon, GlobeIcon } from '@heroicons/vue/outline';
+import type { ProjectInfo } from '@root/Projects';
+import { CodeBracketIcon, GlobeEuropeAfricaIcon } from '@heroicons/vue/24/outline';
 
 defineProps<{
   info: ProjectInfo;
@@ -43,8 +43,8 @@ defineProps<{
     <section class="mt-auto">
       <h4 class="sr-only">Links</h4>
       <div class="flex flex-wrap gap-4">
-        <IconLink :href="info.sourceCodeUrl" :icon="CodeIcon"> Source code </IconLink>
-        <IconLink v-if="info.liveUrl != null" :href="info.liveUrl" :icon="GlobeIcon">
+        <IconLink :href="info.sourceCodeUrl" :icon="CodeBracketIcon"> Source code </IconLink>
+        <IconLink v-if="info.liveUrl != null" :href="info.liveUrl" :icon="GlobeEuropeAfricaIcon">
           Live version
         </IconLink>
         <div v-if="info.wip" class="font-bold text-sm ml-auto">Not finished</div>

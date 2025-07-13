@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Skill, MAX_SKILL_LEVEL } from '@root/Skills';
+import type { Skill } from '@root/Skills';
+import { MAX_SKILL_LEVEL } from '@root/Skills';
 
 defineProps<{
   skill: Skill;

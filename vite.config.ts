@@ -1,27 +1,16 @@
-import { defineConfig } from 'vite';
+import type { UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import tailwindcss from '@tailwindcss/vite';
 import { resolve } from 'path';
 
-export default defineConfig({
-  plugins: [vue()],
+export default {
+  plugins: [vue(), tailwindcss()],
   resolve: {
-    alias: [
-      {
-        find: '@root',
-        replacement: resolve(__dirname, 'src'),
-      },
-      {
-        find: '@components',
-        replacement: resolve(__dirname, 'src', 'components'),
-      },
-      {
-        find: '@stores',
-        replacement: resolve(__dirname, 'src', 'stores'),
-      },
-      {
-        find: '@icons',
-        replacement: resolve(__dirname, 'src', 'icons'),
-      },
-    ],
+    alias: {
+      '@root': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src', 'components'),
+      '@stores': resolve(__dirname, 'src', 'stores'),
+      '@icons': resolve(__dirname, 'src', 'icons'),
+    },
   },
-});
+} satisfies UserConfig;

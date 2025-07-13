@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MailIcon, PaperAirplaneIcon } from '@heroicons/vue/outline';
+import { EnvelopeIcon, PaperAirplaneIcon } from '@heroicons/vue/24/outline';
 
 import ProjectCard from '@components/ProjectCard.vue';
 import ImagesGallery from '@components/ImagesGallery.vue';
@@ -27,8 +27,9 @@ const gallery = useGalleryStore();
           <ContactLink
             :href="`mailto:${contacts.email}`"
             title="Email"
-            :icon="MailIcon"
+            :icon="EnvelopeIcon"
             class="mb-2"
+            :open-in-new-tab="true"
           >
             {{ contacts.email }}
           </ContactLink>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SkillComponent from '@components/Skill.vue';
 
-import { Skill } from '@root/Skills';
+import type { Skill } from '@root/Skills';
 
 defineProps<{
   skillsGroup: string;

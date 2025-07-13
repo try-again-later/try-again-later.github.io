@@ -1,4 +1,4 @@
-type Technology =
+export type Technology =
   | 'PHP'
   | 'React'
   | 'SCSS'
@@ -23,5 +23,3 @@ type Technology =
   | 'MinIO'
   | 'FFmpeg'
   | 'MongoDB';
-
-export default Technology;
