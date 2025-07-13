@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <article>
-    <h3 class="text-sm mb-2 flex gap-2 items-center justify-center sm:justify-start">
+    <h3 class="text-sm mb-2 flex gap-2 items-center justify-start">
       <img
         v-if="skill.icon != null"
         :src="skill.icon"
@@ -25,10 +25,10 @@ defineProps<{
       class="sr-only"
       :aria-label="`${skill.technology} skill level`"
     ></progress>
-    <div aria-hidden="true" class="flex gap-1 justify-center sm:justify-start">
+    <div aria-hidden="true" class="flex gap-1">
       <div
         v-for="i in MAX_SKILL_LEVEL"
-        class="w-10 h-1 rounded-full"
+        class="w-full h-1 rounded-full"
         :class="{ 'bg-orange-500': i <= skill.level, 'bg-gray-300': i > skill.level }"
       ></div>
     </div>

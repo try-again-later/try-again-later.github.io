@@ -13,15 +13,14 @@ withDefaults(
 </script>
 
 <template>
-  <div class="flex gap-1 flex-wrap justify-center sm:justify-start">
-    <a
-      :href="href"
-      class="flex gap-1 items-center text-orange-500 hover:underline"
-      :target="openInNewTab ? '_blank' : '_self'"
-    >
-      <slot name="icon"></slot>
-      {{ title }}:
-    </a>
-    <slot name="content"></slot>
-  </div>
+  <a
+    :href="href"
+    class="flex gap-1 items-center text-orange-500 hover:underline"
+    :target="openInNewTab ? '_blank' : '_self'"
+    v-bind="$attrs"
+  >
+    <slot name="icon"></slot>
+    <span>{{ title }}</span>
+  </a>
+  <slot name="content"></slot>
 </template>

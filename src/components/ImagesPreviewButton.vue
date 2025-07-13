@@ -22,7 +22,7 @@ function onClick() {
     <img
       :src="previewSrc"
       alt="Project screenshot"
-      class="h-48 w-full object-cover object-top border-8 border-gray-100"
+      class="aspect-video lg:h-48 w-full object-cover object-top border-8 border-gray-100"
     />
     <div
       class="absolute inset-0 z-10 bg-black opacity-0 group-hover:opacity-75 group-focus:opacity-75 transition-opacity"

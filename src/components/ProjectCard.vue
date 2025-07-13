@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <article class="p-4 rounded-md shadow-md h-full bg-white flex gap-4 flex-col">
+  <article class="p-4 rounded-md shadow-md h-full bg-white gap-4 grid">
     <h3 class="text-xl">{{ info.name }}</h3>
 
     <section>
@@ -27,14 +27,16 @@ defineProps<{
       </ul>
     </section>
 
+    <ImagesPreviewButton
+      v-if="info.screenshots.length > 0"
+      :preview-src="info.screenshots[0]"
+      :images-urls="info.screenshots"
+      class="mb-4"
+    />
+    <div v-else />
+
     <section>
       <h4 class="sr-only">Description</h4>
-      <ImagesPreviewButton
-        v-if="info.screenshots.length > 0"
-        :preview-src="info.screenshots[0]"
-        :images-urls="info.screenshots"
-        class="mb-4"
-      />
       <div class="flex flex-col gap-4">
         <p v-for="paragraph in info.description">{{ paragraph }}</p>
       </div>

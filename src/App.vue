@@ -19,15 +19,14 @@ const gallery = useGalleryStore();
   <main @keydown.esc="gallery.opened = false">
     <h1 class="sr-only">My page</h1>
 
-    <div class="container m-auto p-6 flex flex-col gap-12">
+    <div class="sm:max-w-7xl m-auto p-6 flex flex-col gap-12">
       <section>
-        <h2 class="text-3xl lg:mb-6 mb-4 text-center sm:text-left">Contacts</h2>
+        <h2 class="text-3xl mb-6 sm:text-left">Contacts</h2>
 
-        <address class="not-italic">
+        <address class="not-italic grid sm:grid-cols-[min-content_auto] sm:gap-2">
           <ContactLink
             :href="`mailto:${contacts.email}`"
             title="Email"
-            class="mb-2"
             :open-in-new-tab="true"
           >
             <template #icon><EnvelopeIcon class="w-5 h-5" /></template>
@@ -37,28 +36,33 @@ const gallery = useGalleryStore();
           <ContactLink
             :href="contacts.telegramLink"
             title="Telegram"
-            class="mb-2"
+            class="mt-4 sm:mt-0"
             :open-in-new-tab="true"
           >
             <template #icon><PaperAirplaneIcon class="w-5 h-5" /></template>
-            <template #content>{{ `@${contacts.telegram}` }}</template>
+            <template #content>
+              <span class="before:content-['@']">{{ contacts.telegram }}</span>
+            </template>
           </ContactLink>
 
           <ContactLink
             :href="contacts.githubLink"
             title="Github"
+            class="mt-4 sm:mt-0"
             :open-in-new-tab="true"
           >
             <template #icon><GithubIcon class="w-5 h-5" /></template>
-            <template #content>{{ `@${contacts.github}` }}</template>
+            <template #content>
+              <span class="before:content-['@']">{{ contacts.github }}</span>
+            </template>
           </ContactLink>
         </address>
       </section>
 
       <section>
-        <h2 class="text-3xl lg:mb-6 mb-4 text-center sm:text-left">Skills</h2>
+        <h2 class="text-3xl mb-6 text-left">Skills</h2>
 
-        <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-8 grid-cols-1 sm:grid-cols-3">
           <SkillsList skills-group="Frontend" :skills="frontendSkills" />
           <SkillsList skills-group="Backend" :skills="backendSkills" />
           <SkillsList skills-group="Misc" :skills="miscSkills" />
@@ -66,10 +70,10 @@ const gallery = useGalleryStore();
       </section>
 
       <section>
-        <h2 class="text-3xl lg:mb-6 mb-4 text-center sm:text-left">Projects</h2>
-        <ul class="grid grid-cols-1 gap-4 lg:grid-cols-3">
-          <li v-for="project in projects" :key="project.name">
-            <ProjectCard :info="project" />
+        <h2 class="text-3xl mb-6 text-left">Projects</h2>
+        <ul class="grid grid-cols-1 gap-4 lg:grid-cols-3 grid-rows-[repeat(5,auto)]">
+          <li v-for="project in projects" :key="project.name" class="contents">
+            <ProjectCard :info="project" class="row-span-5 grid-rows-subgrid" />
           </li>
         </ul>
       </section>

@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
   <section>
-    <h3 class="text-xl mb-4 text-center sm:text-left">{{ skillsGroup }}</h3>
+    <h3 class="text-xl mb-4 text-left">{{ skillsGroup }}</h3>
     <ul class="flex flex-col gap-6">
       <li v-for="skill in skills">
         <SkillComponent :skill="skill" />
