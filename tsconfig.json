@@ -14,9 +14,6 @@
     "module": "ESNext",
     "noEmit": true,
     "isolatedModules": true,
-    "useDefineForClassFields": true,
-    "jsx": "preserve",
-    "sourceMap": true,
 
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
 

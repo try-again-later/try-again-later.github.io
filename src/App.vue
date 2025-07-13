@@ -92,7 +92,7 @@ const gallery = useGalleryStore();
 <style>
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 200ms ease;
 }
 
 .v-enter-from,
