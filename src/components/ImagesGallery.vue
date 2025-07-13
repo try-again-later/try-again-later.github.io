@@ -15,7 +15,7 @@ const currentImageIndex = ref(0);
 </script>
 
 <template>
-  <div class="fixed left-0 top-0 w-full h-full backdrop-blur-xs">
+  <div class="fixed left-0 top-0 w-full h-screen">
     <button @click="$emit('update:opened', false)" class="absolute right-4 top-4 z-30 cursor-pointer">
       <XMarkIcon class="text-white w-16 h-16" />
       <span class="sr-only">Close</span>
