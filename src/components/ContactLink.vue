@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import type { FunctionalComponent } from 'vue';
-
 withDefaults(
   defineProps<{
     href: string;
     title: string;
-    icon?: FunctionalComponent;
     openInNewTab: boolean;
   }>(),
   {
@@ -22,9 +19,9 @@ withDefaults(
       class="flex gap-1 items-center text-orange-500 hover:underline"
       :target="openInNewTab ? '_blank' : '_self'"
     >
-      <component v-if="icon != undefined" :is="icon" class="w-5 h-5" />
+      <slot name="icon"></slot>
       {{ title }}:
     </a>
-    <slot></slot>
+    <slot name="content"></slot>
   </div>
 </template>

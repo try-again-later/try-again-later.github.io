@@ -27,30 +27,30 @@ const gallery = useGalleryStore();
           <ContactLink
             :href="`mailto:${contacts.email}`"
             title="Email"
-            :icon="EnvelopeIcon"
             class="mb-2"
             :open-in-new-tab="true"
           >
-            {{ contacts.email }}
+            <template #icon><EnvelopeIcon class="w-5 h-5" /></template>
+            <template #content>{{ contacts.email }}</template>
           </ContactLink>
 
           <ContactLink
             :href="contacts.telegramLink"
             title="Telegram"
-            :icon="PaperAirplaneIcon"
             class="mb-2"
             :open-in-new-tab="true"
           >
-            {{ `@${contacts.telegram}` }}
+            <template #icon><PaperAirplaneIcon class="w-5 h-5" /></template>
+            <template #content>{{ `@${contacts.telegram}` }}</template>
           </ContactLink>
 
           <ContactLink
             :href="contacts.githubLink"
             title="Github"
-            :icon="GithubIcon"
             :open-in-new-tab="true"
           >
-            {{ `@${contacts.github}` }}
+            <template #icon><GithubIcon class="w-5 h-5" /></template>
+            <template #content>{{ `@${contacts.github}` }}</template>
           </ContactLink>
         </address>
       </section>
