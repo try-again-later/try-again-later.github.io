@@ -32,7 +32,7 @@ function onClick() {
       class="absolute absolute-center text-white font-bold z-20 opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity"
       :class="{ 'opacity-100': pointerType == 'touch' }"
     >
-      Click to expand
+      Нажмите, чтобы развернуть
     </p>
   </button>
 </template>

@@ -45,9 +45,11 @@ defineProps<{
     <section class="mt-auto">
       <h4 class="sr-only">Links</h4>
       <div class="flex flex-wrap gap-4">
-        <IconLink :href="info.sourceCodeUrl" :icon="CodeBracketIcon"> Source code </IconLink>
+        <IconLink :href="info.sourceCodeUrl" :icon="CodeBracketIcon">
+          Исходный код
+        </IconLink>
         <IconLink v-if="info.liveUrl != null" :href="info.liveUrl" :icon="GlobeEuropeAfricaIcon">
-          Live version
+          Открыть онлайн
         </IconLink>
         <div v-if="info.wip" class="font-bold text-sm ml-auto">Not finished</div>
       </div>

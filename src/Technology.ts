@@ -22,4 +22,5 @@ export type Technology =
   | 'Ratchet'
   | 'MinIO'
   | 'FFmpeg'
-  | 'MongoDB';
+  | 'MongoDB'
+  | 'Nuxt';

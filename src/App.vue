@@ -21,7 +21,7 @@ const gallery = useGalleryStore();
 
     <div class="sm:max-w-7xl m-auto p-6 flex flex-col gap-12">
       <section>
-        <h2 class="text-3xl mb-6 sm:text-left">Contacts</h2>
+        <h2 class="text-3xl mb-6 sm:text-left">Контакты</h2>
 
         <address class="not-italic grid sm:grid-cols-[min-content_auto] sm:gap-2">
           <ContactLink
@@ -60,7 +60,7 @@ const gallery = useGalleryStore();
       </section>
 
       <section>
-        <h2 class="text-3xl mb-6 text-left">Skills</h2>
+        <h2 class="text-3xl mb-6 text-left">Технологии</h2>
 
         <div class="grid gap-8 grid-cols-1 sm:grid-cols-3">
           <SkillsList skills-group="Frontend" :skills="frontendSkills" />
@@ -70,7 +70,7 @@ const gallery = useGalleryStore();
       </section>
 
       <section>
-        <h2 class="text-3xl mb-6 text-left">Projects</h2>
+        <h2 class="text-3xl mb-6 text-left">Проекты</h2>
         <ul class="grid grid-cols-1 gap-4 lg:grid-cols-3 grid-rows-[repeat(5,auto)]">
           <li v-for="project in projects" :key="project.name" class="contents">
             <ProjectCard :info="project" class="row-span-5 grid-rows-subgrid" />
